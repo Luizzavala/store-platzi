@@ -9,4 +9,10 @@ export class AppController {
   getHello(): string {
     return this.appService.getHello();
   }
+
+  // @Get(':id') // route or path
+  // // param, its request body
+  // getHelloById(@Param('id') id: string): string {
+  //   return this.appService.getById(id);
+  // }
 }
