@@ -26,6 +26,11 @@ export class UsersService {
     return user;
   }
   //create product
+  /**
+   * It takes a payload, adds an id to it, and then pushes it to the users array
+   * @param {CreateUserDto} payload - CreateUserDto
+   * @returns The new data that was created.
+   */
   save(payload: CreateUserDto) {
     this.counterId = this.counterId + 1;
     const newData = {
@@ -36,6 +41,7 @@ export class UsersService {
     return newData;
   }
   //update product
+  /* Updating the user by id. */
   update(id: number, payload: UpdateUserDto) {
     const user = this.users.find((user) => user.id === id);
     if (!user) {
